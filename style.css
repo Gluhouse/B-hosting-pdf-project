@@ -10,7 +10,7 @@ button {
   cursor: pointer;
 }
 
-.test__wrapper {
+.page__container {
   position: relative;
   margin: 0 auto;
   min-width: 1920px;
@@ -20,29 +20,15 @@ button {
 .main-header {
   height: 100vh;
 
-  background-image: url(./images/people-work.png);
+  background: linear-gradient(
+      27deg,
+      rgba(0, 228, 255, 0.8) 0%,
+      rgba(78, 9, 121, 0.7) 51%,
+      rgba(255, 0, 249, 0.8) 100%
+    ),
+    url(./images/people-work.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.main-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    27deg,
-    rgba(0, 228, 255, 0.8) 0%,
-    rgba(78, 9, 121, 0.7) 51%,
-    rgba(255, 0, 249, 0.8) 100%
-  );
-}
-
-.main-header > * {
-  z-index: 100;
 }
 
 .top {
@@ -66,11 +52,16 @@ button {
   justify-content: space-between;
 }
 
-.contacts__info {
+.top__login {
   display: flex;
 }
 
-.contacts__info:nth-child(1)::before {
+.contacts__info {
+  display: flex;
+  fill: white;
+}
+
+/* .contacts__info:nth-child(1)::before {
   content: "";
   display: inline-block;
   background-image: url(./images/text-bubble.svg);
@@ -101,36 +92,42 @@ button {
   width: 20px;
   height: 20px;
   margin-right: 15px;
-}
-
-/* .top__login {
-  width: 10%;
 } */
 
+.m-r-15px {
+  margin-right: 15px;
+}
+
 .login__cart {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 26px;
   height: 26px;
   margin-right: 14px;
 
   border-radius: 50%;
   background-color: #00aeef;
-  background-image: url(./images/cart.svg);
+  fill: white;
+  /* background-image: url(./images/cart.svg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .login__profile {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 26px;
   height: 26px;
 
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 1);
-  background-image: url(./images/profile.svg);
+  fill: #00aeef;
+  /* background-image: url(./images/profile.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 60%; */
 }
 
 .top__menu {
@@ -146,7 +143,7 @@ button {
   width: 164px;
   height: 47px;
 
-  background-image: url(./images/logo.png);
+  background-image: url(./images/top/logo.png);
   background-repeat: no-repeat;
 }
 
@@ -182,7 +179,7 @@ button {
   justify-content: center;
   align-items: center;
 
-  background-image: url(./images/hexagon.svg);
+  background-image: url(./images/top/hexagon.svg);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -201,7 +198,7 @@ button {
   width: 80px;
   height: 90px;
 
-  background-image: url(./images/hexagon-1.svg);
+  background-image: url(./images/top/hexagon-1.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -229,6 +226,25 @@ button {
 .flex-center {
   display: flex;
   justify-content: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .top__desc-text {
@@ -312,28 +328,102 @@ button {
   top: 70%;
 }
 
-/* .contact__info:nth-child(2)::before {
-}
+.boasting__img {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  margin-left: 10px;
 
-.contact__info:nth-child(3)::before {
-} */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-/* .contacts__img {
-  width: 20px;
-  height: 20px;
-  margin-right: 15px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  fill: white;
 }
 
-.img-text-bubble {
-  background-image: url(./images/text-bubble.svg);
+.bc-blackpurple {
+  background-color: #1a1a2b;
 }
 
-.img-phone {
-  background-image: url(./images/phone.svg);
+.bc-purple {
+  background-color: #9655c7;
 }
 
-.img-email {
-  background-image: url(./images/email.svg);
-} */
+.bc-cyan {
+  background-color: #00aeef;
+}
+
+.bc-limegreen {
+  background-color: #86c724;
+}
+
+.boasting__img:nth-child(2) {
+  width: 501px;
+  height: 373px;
+  border-radius: 0;
+  margin-left: 0;
+
+  background-image: url(./images/boasting/people-talk.png);
+}
+
+.boasting__article {
+  width: 43%;
+}
+
+.boasting__wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding: 118px 0 126px;
+}
+
+.boasting__block {
+  display: flex;
+  width: 50%;
+  margin: 15px 0;
+}
+
+.boasting__block:nth-child(1) {
+  order: 1;
+}
+.boasting__block:nth-child(2) {
+  order: 3;
+}
+.boasting__block:nth-child(3) {
+  order: 2;
+}
+.boasting__block:nth-child(4) {
+  order: 4;
+}
+
+.boasting__img-desc {
+  width: 60%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.boasting__img-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.boasting__img-count {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.boasting__p1 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #616161;
+}
+
+.boasting__h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
