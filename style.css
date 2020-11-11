@@ -503,9 +503,9 @@ button {
 
   background: linear-gradient(
     27deg,
-    rgba(0, 228, 255, 0.8) 0%,
-    rgba(78, 9, 121, 0.7) 51%,
-    rgba(255, 0, 249, 0.8) 100%
+    rgba(0, 228, 255, 1) 0%,
+    rgba(78, 9, 121, 1) 51%,
+    rgba(255, 0, 249, 1) 100%
   );
 
   border-radius: 1500px;
@@ -542,7 +542,7 @@ button {
   appearance: none;
   background: none;
   outline: none;
-  border: 2px solid cyan;
+  border: 2px solid #00aeef;
 }
 
 .checkbox input:checked::after {
@@ -552,4 +552,91 @@ button {
   left: 2px;
   font-size: 14px;
   color: white;
+}
+
+.how__section {
+  text-align: center;
+}
+
+.how__section p {
+  font-size: 15px;
+  font-weight: normal;
+  color: #616161;
+}
+
+.how__h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 28px;
+}
+
+.p-t-118px {
+  padding-top: 118px;
+}
+
+.how__p {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.how__card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.how__wrapper {
+  margin: 0 auto;
+  width: 70%;
+  position: relative;
+}
+
+.how__card-wrapper {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.how__img {
+  width: 71px;
+  height: 71px;
+  margin-bottom: 29px;
+  border: 3px dotted #00aeef;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  color: #00aeef;
+  background: white;
+}
+
+.color-gradient-bluetopink {
+  background: linear-gradient(
+    27deg,
+    rgba(0, 228, 255, 1) 0%,
+    rgba(78, 9, 121, 1) 51%,
+    rgba(255, 0, 249, 1) 100%
+  );
+  color: white;
+  border: none;
+  z-index: 1;
+}
+
+.dotted-line {
+  position: absolute;
+  z-index: -1;
+  top: 35px;
+  left: 12.5%;
+  width: 75%;
+  height: 1px;
+  border-top: 3px dotted #00aeef;
+}
+
+.how__card-p {
+  margin-bottom: 120px;
 }
