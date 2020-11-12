@@ -435,7 +435,12 @@
           <div class="search">
             <h2 class="search__heading">Find your domain name</h2>
             <p class="search__desc">Starting From $1.65 Per Year!</p>
-            <form class="search__form">
+            <form
+              method="get"
+              action="https://www.google.com/search"
+              class="search__form"
+              target="_blank"
+            >
               <div class="search__bar">
                 <figure class="search__form-img">
                   <?xml version="1.0" encoding="iso-8859-1"?>
@@ -482,7 +487,7 @@
                 </figure>
                 <input
                   type="text"
-                  name="url-1"
+                  name="q"
                   placeholder="eg. search.com"
                 /><button type="submit">SEARCH</button>
               </div>
