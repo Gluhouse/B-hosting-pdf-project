@@ -1629,6 +1629,7 @@ p {
 
 .sponsors__wrapper {
   max-width: 1920px;
+  margin: 0 auto;
 }
 
 .sponsors__img-wrapper {
