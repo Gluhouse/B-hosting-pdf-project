@@ -1500,6 +1500,184 @@ p {
   background-position: center;
 }
 
+.subscribe__section {
+  background: linear-gradient(
+    27deg,
+    rgba(0, 228, 255, 0.9) 0%,
+    rgba(78, 9, 121, 0.8) 51%,
+    rgba(255, 0, 249, 0.9) 100%
+  );
+  height: 500px;
+}
+
+.subscribe__wrapper {
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.subscribe__form {
+  display: block;
+  width: 40%;
+  margin-left: 20%;
+}
+
+.subscribe__bar {
+  width: 100%;
+  display: flex;
+}
+
+.subscribe__form-email {
+  width: 65%;
+  padding: 1.5rem 0 1.5rem 2rem;
+  font-size: 0.9275rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.subscribe__form-email::placeholder {
+  color: rgb(43, 43, 43);
+  font-family: Open-Sans;
+  letter-spacing: 0.1rem;
+}
+
+.subscribe__form-btn {
+  width: 35%;
+  outline: none;
+  border: none;
+  padding: 1.5rem 0 1.5rem;
+  background-color: #00aeef;
+  font-size: 1.125rem;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  letter-spacing: 0.1rem;
+}
+
+.subscribe__heading {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.subscribe__desc {
+  color: white;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+  font-size: 0.8125rem;
+}
+
+.live-chat {
+  height: 450px;
+  width: 20%;
+  position: absolute;
+  left: 65%;
+  top: 275px;
+
+  background: white;
+  text-align: center;
+
+  box-shadow: 0 1px 2px 4px #f6f6f6, -1px 0 2px 4px #f6f6f6,
+    1px 0 2px 4px #f6f6f6;
+}
+
+.live-chat__img {
+  width: 4rem;
+  height: 4rem;
+  margin: 3rem auto 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #00aeef;
+}
+
+.live-chat__img-phone {
+  width: 35%;
+}
+
+.live-chat__heading {
+  margin-bottom: 1.5rem;
+}
+
+.live-chat__title {
+  margin-bottom: 2rem;
+}
+
+.live-chat__number {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.live-chat__btn {
+  color: white;
+  font-size: 1.25rem;
+  padding: 1.125rem;
+  background-color: #00aeef;
+}
+
+.sponsors__section {
+  background-color: white;
+}
+
+.sponsors__wrapper {
+  max-width: 1920px;
+}
+
+.sponsors__img-wrapper {
+  width: 45%;
+  margin-left: 17%;
+  padding-top: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.sponsors__img {
+  margin: 0 auto;
+}
+
+.sponsors__btn-wrapper {
+  width: 20%;
+  margin-left: 29%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.sponsors__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.75rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.5rem;
+}
+
+#sponsors__btn-1 {
+  background-color: #f6f6f6;
+  color: #00aeff;
+}
+
+#sponsors__btn-2 {
+  color: #f6f6f6;
+  background-color: #00aeef;
+  opacity: 0.24;
+}
+
 @media (max-width: 1600px) {
   html {
     font-size: 13px;
@@ -1859,6 +2037,33 @@ p {
   .news__read {
     margin-right: 3rem;
   }
+
+  .subscribe__form {
+    width: 60%;
+    margin-left: 5%;
+  }
+
+  .live-chat {
+    left: 68%;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .live-chat__img {
+    margin-top: 0;
+  }
+
+  .sponsors__img-wrapper {
+    width: 60%;
+    margin-left: 5%;
+  }
+
+  .sponsors__btn-wrapper {
+    margin-left: 26%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1940,6 +2145,42 @@ p {
 
   .news__img {
     height: 150px;
+  }
+
+  .subscribe__form {
+    width: 90%;
+  }
+
+  .live-chat {
+    width: 90%;
+    height: 200px;
+    left: 5%;
+    top: 400px;
+  }
+
+  .live-chat__heading {
+    margin: 0;
+  }
+
+  .live-chat__img {
+    margin: 0;
+  }
+
+  .live-chat__number {
+    margin: 0;
+  }
+
+  .live-chat__title {
+    margin: 0;
+  }
+
+  .sponsors__img-wrapper {
+    width: 90%;
+    padding-top: 11rem;
+  }
+
+  .sponsors__btn-wrapper {
+    margin-left: 40%;
   }
 }
 
